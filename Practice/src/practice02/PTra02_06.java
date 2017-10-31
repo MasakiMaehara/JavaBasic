@@ -11,6 +11,11 @@ public class PTra02_06 {
 		int x = 10;
 		int y = 50;
 
+		int z = x;
+		x = y;
+		y = z;
+
+
 		System.out.println("x:" + x);
 		System.out.println("y:" + y);
 
