@@ -18,6 +18,68 @@ public class PTra10_06 {
 		 * carインスタンスを3件作成し、それぞれの色、ガソリンを入力して決定してください
 		 * 各carインスタンスのrunメソッドを実行して、それぞれ「目的地にまでn時間かかりました。残りのガソリンは、xリットルです」を出力してください。
 		 */
+		// 目的地までの距離
+		final int distance = 300;
+		int n = 1;//runの実行回数//
+		int num = 0;//進んだ距離//
+
+		Car car1 = new Car();
+		car1.color="Red";
+		car1.gasoline=50;
+		while(true) {
+			int i=car1.run();//runメソッドの戻り値を取得//
+			n++;
+			if(num<distance) {
+				num+=i;
+			}else if(num>=distance) {
+				System.out.println("目的地までに"+n+"時間かかりました。残りのガソリンは"+car1.gasoline+"リットルです。");
+				break;
+			}
+			if(car1.gasoline<=0){
+				System.out.println("目的地に到達できませんでした。");
+				break;
+			}
+		}
+
+		Car car2 = new Car();
+		car2.color="Blue";
+		car2.gasoline=100;
+		while(true) {
+			int i=car2.run();//runメソッドの戻り値を取得//
+			n++;
+			if(num<distance) {
+				num+=i;
+			}else if(num>=distance) {
+				System.out.println("目的地までに"+n+"時間かかりました。残りのガソリンは"+car2.gasoline+"リットルです。");
+				break;
+			}
+			if(car2.gasoline<=0){
+				System.out.println("目的地に到達できませんでした。");
+				break;
+			}
+		}
+
+
+		Car car3 = new Car();
+		car3.color="black";
+		car3.gasoline=200;
+		while(true) {
+			int i=car3.run();//runメソッドの戻り値を取得//
+			n++;
+			if(num<distance) {
+				num+=i;
+			}else if(num>=distance) {
+				System.out.println("目的地までに"+n+"時間かかりました。残りのガソリンは"+car3.gasoline+"リットルです。");
+				break;
+			}
+			if(car3.gasoline<=0){
+				System.out.println("目的地に到達できませんでした。");
+				break;
+			}
+		}
+
+
+
 
 	}
 }
